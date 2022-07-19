@@ -1,10 +1,8 @@
 package org.example;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.net.URL;
 import java.util.Arrays;
 
@@ -23,13 +21,13 @@ public class Main {
             final BufferedImage bufferedImage = ImageIO.read(imageUrl);
             final String oututPath = classLoader.getResource("").getPath();
             final File outputFIle = new File(oututPath + "/blurred.jpg");
-            FilteredImage blurredImage = new FilteredImage();
+            BlurFilter blurredImage = new BlurFilter();
             FileImageWriter fileImageWriter = new FileImageWriter(outputFIle);
             fileImageWriter.write(blurredImage.filter(bufferedImage));
             final String oututPath1 = classLoader.getResource("").getPath();
             final File outputFIle1 = new File(oututPath1 + "/blurredImageFilter.jpg");
             FileImageWriter fileImageWriter1 = new FileImageWriter(outputFIle1);
-            BlurredImage blurredImage1 = new BlurredImage();
+            ColorFilter blurredImage1 = new ColorFilter();
             fileImageWriter1.write(blurredImage1.filter(bufferedImage));
 
 

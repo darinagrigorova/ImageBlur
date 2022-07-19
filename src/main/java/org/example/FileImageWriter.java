@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class FileImageWriter implements  FileWriter {
+public class FileImageWriter implements BufferedFileWriter {
         File file;
 
     public FileImageWriter(File file) {
